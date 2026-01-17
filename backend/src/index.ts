@@ -7,6 +7,7 @@ dotenv.config();
 
 const fastify = Fastify({
   logger: true,
+  bodyLimit: 10485760, // 10MB limit for images
 });
 
 fastify.register(cors, {
