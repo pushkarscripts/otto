@@ -41,7 +41,7 @@ export const Mascot: React.FC<MascotProps> = ({ state }) => {
       <img 
         src={images[state]} 
         alt={`Mascot ${state}`} 
-        className="w-32 h-32 object-contain"
+        className="w-[12rem] h-[12rem] object-contain"
       />
     </div>
   );

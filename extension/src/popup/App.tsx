@@ -184,8 +184,7 @@ function App() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200 p-4 flex justify-between items-center z-10">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">O</div>
-          <h1 className="font-bold text-gray-800">Otto</h1>
+          <img src="../../logo.png" alt="Otter logo" className='w-auto h-8' />
         </div>
         
         <div className="flex items-center gap-2">
@@ -214,10 +213,10 @@ function App() {
             
             {status === 'idle' && (
               <div className="text-center mt-8">
-                <p className="text-gray-600 mb-6">Ready to analyze this page for<br/><b>{persona.replace('_', ' ')}</b> risks.</p>
+                <p className="text-gray-600 text-md mb-6">Ready to analyze this page for<br/><b>{persona.replace('_', ' ')}</b> risks.</p>
                 <button 
                   onClick={handleAnalyze}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:scale-105"
+                  className="bg-blue-600 h-15 flex item-center justify-center text-[1.2rem] w-full hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition hover:scale-105"
                 >
                   Analyze Terms
                 </button>
@@ -263,39 +262,6 @@ function App() {
                     </div>
                   </div>
                   <p className="text-sm mt-2 text-gray-700 leading-relaxed">{result.summary}</p>
-                </div>
-
-                {/* Risk Distribution Chart */}
-                <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider mb-2">Risk Distribution</h3>
-                  <div className="h-40 w-full flex items-center justify-center">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <PieChart>
-                        <Pie
-                          data={[
-                            { name: 'Low', value: result.notable_clauses.filter(c => c.risk === 'low').length, color: '#22c55e' },
-                            { name: 'Medium', value: result.notable_clauses.filter(c => c.risk === 'medium').length, color: '#eab308' },
-                            { name: 'High', value: result.notable_clauses.filter(c => c.risk === 'high').length, color: '#ef4444' }
-                          ].filter(d => d.value > 0)}
-                          cx="50%"
-                          cy="50%"
-                          innerRadius={30}
-                          outerRadius={50}
-                          paddingAngle={5}
-                          dataKey="value"
-                        >
-                          {[
-                            { name: 'Low', value: result.notable_clauses.filter(c => c.risk === 'low').length, color: '#22c55e' },
-                            { name: 'Medium', value: result.notable_clauses.filter(c => c.risk === 'medium').length, color: '#eab308' },
-                            { name: 'High', value: result.notable_clauses.filter(c => c.risk === 'high').length, color: '#ef4444' }
-                          ].filter(d => d.value > 0).map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={entry.color} />
-                          ))}
-                        </Pie>
-                        <RechartsTooltip />
-                      </PieChart>
-                    </ResponsiveContainer>
-                  </div>
                 </div>
 
                 {/* Clauses */}
