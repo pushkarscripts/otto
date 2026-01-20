@@ -12,11 +12,11 @@ const Hero = () => {
             Otter helps you make sense of complicated Terms & Conditions. Our AI-powered extension classifies clauses so you can browse with confidence.
           </p>
           <div className="flex justify-center md:justify-start space-x-4 pt-4">
-            <a href="#cta" className="bg-accent text-white px-8 py-3 rounded-md font-semibold text-lg hover:opacity-90 transition-opacity">
-              Add to Chrome
+            <a href="https://github.com/pushkarscripts/otto" target="_blank" rel="noopener noreferrer" className="bg-accent text-white px-8 py-3 rounded-md font-semibold text-lg hover:opacity-90 transition-opacity">
+              View on GitHub
             </a>
             <a href="#how-it-works" className="bg-transparent border-2 border-border-color text-primary-text px-8 py-3 rounded-md font-semibold text-lg hover:bg-black/5 transition-colors">
-              How it works
+              View Demo
             </a>
           </div>
         </div>

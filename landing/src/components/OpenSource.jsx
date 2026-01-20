@@ -7,7 +7,7 @@ const OpenSource = () => {
           Otter is an open project. We welcome contributions from developers, designers, and researchers who want to make the web more transparent and user-friendly.
         </p>
         <div className="mt-8">
-          <a href="https://github.com/notsomohit/otto" target="_blank" rel="noopener noreferrer" className="bg-accent text-white px-8 py-3 rounded-md font-semibold text-lg hover:opacity-90 transition-opacity">
+          <a href="https://github.com/pushkarscripts/otto" target="_blank" rel="noopener noreferrer" className="bg-accent text-white px-8 py-3 rounded-md font-semibold text-lg hover:opacity-90 transition-opacity">
             Contribute on GitHub
           </a>
         </div>
