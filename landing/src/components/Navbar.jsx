@@ -18,12 +18,11 @@ const Navbar = () => {
                 <span>Test Pages</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <a href="/examples/safe.html" target="_blank" className="block px-4 py-2 text-sm text-green-700 hover:bg-green-50">SafeMail (Low Risk)</a>
-                <a href="/examples/medium.html" target="_blank" className="block px-4 py-2 text-sm text-yellow-700 hover:bg-yellow-50">StreamFlix (Medium Risk)</a>
-                <a href="/examples/risky.html" target="_blank" className="block px-4 py-2 text-sm text-red-700 hover:bg-red-50">SketchyLoans (High Risk)</a>
-              </div>
-            </div>
+                          <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="examples/safe.html" target="_blank" className="block px-4 py-2 text-sm text-green-700 hover:bg-green-50">SafeMail (Low Risk)</a>
+                            <a href="examples/medium.html" target="_blank" className="block px-4 py-2 text-sm text-yellow-700 hover:bg-yellow-50">StreamFlix (Medium Risk)</a>
+                            <a href="examples/risky.html" target="_blank" className="block px-4 py-2 text-sm text-red-700 hover:bg-red-50">SketchyLoans (High Risk)</a>
+                          </div>            </div>
 
             <a href="#privacy" className="hover:text-accent transition-colors">Privacy</a>
           </div>
